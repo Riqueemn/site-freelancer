@@ -16,6 +16,92 @@ code {
 	
 }
 
+.selectSearch{
+	position: relative;
+	margin-left: 1%;
+}
+
+.img-avatar{
+	width: 50px;
+	height: 50px;
+	border-radius: 100px;
+	margin: 0 auto;
+	background-image: url("https://www.w3schools.com/howto/img_avatar.png");
+	background-size: 50px;
+	margin-top: 10px;
+}
+
+.lista{
+	border: #2c3e50 solid 2px;
+}
+
+.listaFreelancer{
+	width: 100%;
+}
+
+.font-local{
+	font-size: 11px;
+}
+
+.containerResult{
+	padding: 10px;
+	width: 100px;
+}
+
+.filtro{
+	background-color: #afe0ec2d;
+	padding: 10px;
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 2%;
+}
+
+.titleFreelancer{
+	font-size: 14px;
+}
+
+.profissaoFreelancer{
+	font-size: 12px;
+}
+
+.filtroFreelancerResult{
+	margin-top: 2%;
+	width: 40%;
+	border-radius: 20px;
+	margin-left: 10%;
+}
+
+.infoPerfil{
+	float: left;
+}
+
+.perfil{
+	background-color: black;
+	margin-top: 2%;
+}
+.img-avatar-perfil{
+	width: 200px;
+	height: 200px;
+	border-radius: 100px;
+	margin: 0 auto;
+	background-image: url("https://www.w3schools.com/howto/img_avatar.png");
+	background-size: 200px;
+	margin-top: 10px;
+}
+
+.infoDados{
+	width: 320px;
+	height: 500px;
+}
+
+.infoProjetos{
+	width: 900px;
+	height: 500px;
+}
+
+.cardDados{
+	border: red solid 2px;
+}
 
 .bannerHome{
 	background-color: #2ecc71;
