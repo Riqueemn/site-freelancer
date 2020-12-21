@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+
 export default class InserirFL extends Component {
 
     constructor(props) {
@@ -55,6 +56,7 @@ export default class InserirFL extends Component {
   
 
     consultarMunicipios(){
+        
 
         fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados/33/municipios')
         .then(response => response.json())

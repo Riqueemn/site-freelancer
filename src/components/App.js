@@ -11,6 +11,8 @@ import InserirR from './InserirR';
 import InserirM from './InserirM';
 import Editar from './Editar';
 import Ver from './Ver';
+import InfoFreelancer from './InfoFreelancer';
+
 
 
 export default class App extends React.Component{
@@ -18,7 +20,7 @@ export default class App extends React.Component{
   render(){
     return (
       <Router>
-        <div className="container-fluid bg-secondary">
+        <div className="container-fluid bg-info">
           <nav className="navbar navbar-expand-lg navbar-light">
             <Link to={'/home'} className="navbar-brand">Site - Freelancer</Link>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -48,6 +50,7 @@ export default class App extends React.Component{
             <Route exact path="/inserirM" component={InserirM} />
             <Route exact path="/consulta" component={Consulta} />
             <Route exact path="/exame" component={Exame} />
+            <Route exact path="/infoFreelancer" component={InfoFreelancer} />
             <Route path="/editar/:id" component={Editar}/>
             <Route path="/ver" component={Ver}/>
           </Switch>

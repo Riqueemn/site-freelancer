@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ListaDeRegistro from './ListaDeRegistro';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 export default class Ver extends Component{
     constructor(props){
@@ -193,31 +194,92 @@ export default class Ver extends Component{
     render(){
         return (
             <div className="container">
-                <h3 align="center">Lista de Freelancers</h3>
+                <div className="filtro">
+                <h3 align="center">Consultar Freelancers</h3>
                 <form>
-                    <div className="form-group">
+                    <div className="container">
+                    <div class="row">
+                    <div class="col-sm">
+                    <div className="form-group selectSearch">
                         <label>Profissao: </label>
-                        <select className="form-control form-select" aria-label="Default select example" onChange={this.onChangeProfissao}>
+                        <select className="form-control form-select form-select " aria-label="Default select example" onChange={this.onChangeProfissao}>
                             <option value="">Empty</option>
                             {this.listarProfissoes()}
                         </select>
                     </div>
-                    <div className="form-group">
+                    </div>
+                    <div class="col-sm">
+                    <div className="form-group selectSearch">
                         <label>Municipio: </label>
-                        <select className="form-control form-select" aria-label="Default select example" onChange={this.onChangeMunicipio}>
+                        <select className="form-control form-select-sm" aria-label="Default select example" onChange={this.onChangeMunicipio}>
                             <option value="">Empty</option>
                             { this.listarMunicipios() }
                         </select>
                     </div>
-                    <div className="form-group">
+                    </div>
+                    <div class="col-sm">
+                    <div className="form-group selectSearch">
                         <label>Regiao: </label>
                         <select className="form-control form-select" aria-label="Default select example" disabled={this.state.disabledR}  onChange={this.onChangeRegiao}>
                             <option value="">Empty</option>
                             {this.listarRegioes()}
                         </select>
                     </div>
+                    </div>
+                    </div>
+                    </div>
                 </form>
-                <table className="table table-striped" style={{marginTop: 20}}>
+                </div>
+                <div className="container containerResult">
+                <div className="filtroFreelancerResult">
+                <div class="row">
+
+                <div class="col-sm">
+
+                    <div className="card listaFreelancer">
+                        <div className="img-avatar">
+                        </div>
+                        <div className="card-body">
+                            <p className="card-title titleFreelancer">Henrique Moreira</p>
+                            <p className="card-text profissaoFreelancer">Programador TI</p>
+                        </div>
+                        <ul className="list-group list-group-flush">
+                            <li className="list-group-item font-local">Rio de Janeiro - Campo Grande</li>
+                        </ul>
+                        <div className="card-body">
+                            <Link path="/infoFreelancer" to={'/infoFreelancer'} className="btn btn-info">Ver Mais</Link>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+
+                    <div className="card listaFreelancer">
+                        <div className="img-avatar">
+                        </div>
+                        <div className="card-body">
+                            <h6 className="card-title titleFreelancer">Carlos Henrique</h6>
+                            <p className="card-text profissaoFreelancer">Design</p>
+                        </div>
+                        <ul className="list-group list-group-flush">
+                            <li className="list-group-item font-local">Seropédica</li>
+                        </ul>
+                        <div className="card-body">
+                            <a href="#" className="btn btn-info">Ver Mais</a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                
+            </div>
+        )
+    }
+}
+
+/*
+
+<table className="table table-striped" style={{marginTop: 20}}>
                     <thead>
                         <tr>
                             <th>Nome</th>
@@ -229,7 +291,5 @@ export default class Ver extends Component{
                         { this.listarProfissionais() }
                     </tbody>
                 </table>
-            </div>
-        )
-    }
-}
+
+                */
