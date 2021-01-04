@@ -48,12 +48,26 @@ code {
 	width: 100px;
 }
 
+.navBar-color{
+	background-color: black;
+}
+
+
 .filtro{
 	background-color: #afe0ec2d;
 	padding: 10px;
 	width: 80%;
 	margin: 0 auto;
 	margin-top: 2%;
+}
+
+.menu-animate{
+	transform: scale(1);
+	transition-duration: 0.5s;
+}
+
+.menu-animate:hover{
+	transform: scale(1.2);
 }
 
 .titleFreelancer{
