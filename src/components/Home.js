@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Carousel } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
+
 
 export default class Home extends Component {
 
@@ -9,9 +11,25 @@ export default class Home extends Component {
 
     render() {
         return (  
-            <div className="container-fluid">
-              <h1>Site</h1>
-          </div>
+            <Container>
+                <Carousel>
+                    <Carousel.Item>
+                            <img
+                            className="d-block w-100"
+                            src={process.env.PUBLIC_URL + "images/banner.jpeg"}
+                            alt="First slide"
+                            />
+                        
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                        className="d-block w-100"
+                        src="https://cdn.pixabay.com/photo/2015/12/15/09/02/banner-1093898_960_720.jpg"
+                        alt="Third slide"
+                        />
+                    </Carousel.Item>
+                </Carousel>
+            </Container>
         )
     }
 }
